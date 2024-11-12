@@ -4,3 +4,33 @@
     <div id="editor"></div>
   </div>
 </div>
+
+<button (click)="toggleChatPopup()" class="chatbot-btn">
+  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+    <path
+      d="M12 3C6.48 3 2 7.48 2 13c0 2.41.92 4.61 2.44 6.28L2 21l4.26-2.06C8.39 20.52 10.15 21 12 21c5.52 0 10-4.48 10-10S17.52 3 12 3zm-1 11h-2v-2h2v2zm0-4h-2V8h2v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2z"
+    />
+  </svg>
+</button>
+
+<!-- Chat Popup -->
+<div *ngIf="isChatOpen" class="chat-popup">
+  <div class="chat-header">
+    <h3>Chatbot</h3>
+    <button (click)="toggleChatPopup()" class="close-chat-btn">X</button>
+  </div>
+  <div class="chat-content">
+    <div
+      *ngFor="let message of conversation"
+      [ngClass]="message.sender === 'user' ? 'user-message' : 'bot-message'"
+    >
+      <strong *ngIf="message.sender === 'user'">You:</strong>
+      <strong *ngIf="message.sender === 'bot'">Bot:</strong>
+      {{ message.message }}
+    </div>
+  </div>
+  <div class="chat-input">
+    <input [(ngModel)]="userMessage" placeholder="Type a message..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>

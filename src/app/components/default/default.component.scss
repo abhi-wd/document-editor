@@ -1,31 +1,122 @@
 .doc-editor {
   padding: 15px 20px;
-  height: 70vh;
+  height: 60vh;
 }
 
-
 .export-pdf-btn {
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text color */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Top and bottom padding 10px, left and right padding 20px */
-    font-size: 16px; /* Text size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background color and transform transitions */
-    margin-bottom: 10px;
-  }
-  
-  .export-pdf-btn:hover {
-    background-color: #0056b3; /* Darker blue background on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
-  }
-  
-  .export-pdf-btn:focus {
-    outline: none; /* Remove focus outline */
-  }
-  
-  .export-pdf-btn:active {
-    background-color: #004085; /* Darker background on active click */
-  }
-  
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Top and bottom padding 10px, left and right padding 20px */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background color and transform transitions */
+  margin-bottom: 10px;
+}
+
+.export-pdf-btn:hover {
+  background-color: #0056b3; /* Darker blue background on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.export-pdf-btn:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.export-pdf-btn:active {
+  background-color: #004085; /* Darker background on active click */
+}
+
+.chatbot-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat Popup */
+.chat-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-chat-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chat-content {
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+  height: 200px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.chat-input button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.user-message {
+  text-align: right;
+  margin: 5px 0;
+  padding: 8px;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+}
+
+.bot-message {
+  text-align: left;
+  margin: 5px 0;
+  padding: 8px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
