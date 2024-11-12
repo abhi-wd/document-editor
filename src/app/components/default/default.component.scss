@@ -1,0 +1,31 @@
+.doc-editor {
+  padding: 15px 20px;
+  height: 70vh;
+}
+
+
+.export-pdf-btn {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Top and bottom padding 10px, left and right padding 20px */
+    font-size: 16px; /* Text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background color and transform transitions */
+    margin-bottom: 10px;
+  }
+  
+  .export-pdf-btn:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .export-pdf-btn:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  .export-pdf-btn:active {
+    background-color: #004085; /* Darker background on active click */
+  }
+  

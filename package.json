@@ -1,0 +1,57 @@
+{
+  "name": "ngx-quill-example",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:deploy": "ng build --configuration production --base-href /ngx-quill-example/ && gh-pages -d ./dist/ngx-quill-example/browser",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^18.2.0",
+    "@angular/common": "^18.2.0",
+    "@angular/compiler": "^18.2.0",
+    "@angular/core": "^18.2.0",
+    "@angular/forms": "^18.2.0",
+    "@angular/material": "^18.2.12",
+    "@angular/platform-browser": "^18.2.0",
+    "@angular/platform-browser-dynamic": "^18.2.0",
+    "@angular/router": "^18.2.0",
+    "file-saver": "^2.0.5",
+    "highlight.js": "^11.10.0",
+    "jspdf": "^2.5.2",
+    "katex": "^0.16.11",
+    "ngx-quill": "^26.0.9",
+    "quill": "^2.0.2",
+    "quill-image-resizor": "1.3.0",
+    "quill-mention": "^6.0.1",
+    "quill-to-pdf": "^1.0.7",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.3.0",
+    "zone.js": "^0.14.10"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.1",
+    "@angular/cli": "^18.2.1",
+    "@angular/compiler-cli": "^18.2.0",
+    "@types/file-saver": "^2.0.7",
+    "@types/jasmine": "~5.1.4",
+    "gh-pages": "^6.1.1",
+    "jasmine-core": "~5.2.0",
+    "karma": "~6.4.4",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.1",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.5.4"
+  },
+  "engines": {
+    "node": "20.12.0"
+  },
+  "volta": {
+    "node": "20.12.0"
+  }
+}

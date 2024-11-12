@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #FFF8DC; /* Cream white color */
+    border-radius: 8px; /* Rounded corners */
+    margin: 10px auto;
+    max-width: 96%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    color: #333;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333; /* Darker color for logo text */
+  }
+  
+  .menu a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #555;
+  }
+  

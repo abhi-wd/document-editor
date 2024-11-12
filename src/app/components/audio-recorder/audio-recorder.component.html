@@ -1,0 +1,24 @@
+<div class="audio-recorder-container">
+  <div class="controls">
+    <button *ngIf="!isRecording" class="record-btn" (click)="startRecording()">
+      Start Recording
+    </button>
+    <button *ngIf="isRecording" class="stop-btn" (click)="stopRecording()">
+      Stop Recording
+    </button>
+  </div>
+
+  <div *ngIf="audioUrl" class="audio-player">
+    <audio [src]="audioUrl" controls></audio>
+    <a [href]="audioUrl" download="recording.wav" class="download-link"
+      >Download Recording</a
+    >
+  </div>
+
+  <div class="upload-section">
+    <label for="file-upload" class="custom-file-upload">
+      Choose File
+    </label>
+    <input type="file" id="file-upload" (change)="uploadAudio($event)" accept="audio/*" />
+  </div>
+</div>
