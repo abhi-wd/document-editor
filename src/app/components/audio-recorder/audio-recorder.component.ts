@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { AudioService } from './audio.service';
 
 @Component({
   selector: 'app-audio-recorder',
@@ -13,6 +14,8 @@ export class AudioRecorderComponent {
   audioChunks: Blob[] = [];
   isRecording = false;
   audioUrl: string | null = null;
+
+  constructor(private audioService: AudioService) { } 
 
   startRecording() {
     navigator.mediaDevices.getUserMedia({ audio: true })
@@ -46,6 +49,24 @@ export class AudioRecorderComponent {
     if (input.files && input.files.length > 0) {
       const file = input.files[0];
       this.audioUrl = URL.createObjectURL(file);
+    }
+  }
+
+  callOpenApi() {
+    if (this.audioUrl) {
+      const audioBlob = new Blob(this.audioChunks, { type: 'audio/wav' });
+
+      // Call the service to upload the audio file
+      this.audioService.uploadAudioFile(audioBlob).subscribe({
+        next: (response) => {
+          console.log('Audio file uploaded successfully:', response);
+        },
+        error: (error) => {
+          console.error('Error uploading audio file:', error);
+        }
+      });
+    } else {
+      console.log("No audio recorded.");
     }
   }
 }
